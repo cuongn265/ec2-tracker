@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'ec2/tracer'
+Ec2::Tracer::Writer.start
