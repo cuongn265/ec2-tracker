@@ -5,6 +5,7 @@ module Ec2
   module Tracer
     class Writer
       WRITE_MODE = 'a'.freeze
+      TEMP_IP = '0.0.0.0'
 
       attr_reader :file_name, :host_prefix, :range, :user, :identity_file
 
@@ -38,7 +39,7 @@ module Ec2
         %{
   # #{host}
   Host #{host}
-  HostName #{host_name}
+  HostName #{host_name || TEMP_IP}
   User #{user}
   IdentityFile #{identity_file}
         }
