@@ -1,4 +1,4 @@
-require "ec2/tracer/version"
+# require "ec2/tracer/version"
 require 'aws-sdk-ec2'
 require 'thor'
 
